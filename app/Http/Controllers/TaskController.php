@@ -22,7 +22,6 @@ class TaskController extends Controller
         $response = [
             "status" => 200,
             "products"=> $data,
-            "message" => ""
         ];
 
         return response()->json($response);
@@ -38,7 +37,6 @@ class TaskController extends Controller
         $response = [
             "status" => 200,
             "product"=> $data,
-            "message" => ""
         ];
 
         return response()->json($response);
@@ -184,7 +182,6 @@ class TaskController extends Controller
         $response = [
             "status" => 200,
             "products"=> $data,
-            "message" => ""
         ];
 
         return response()->json($response);
