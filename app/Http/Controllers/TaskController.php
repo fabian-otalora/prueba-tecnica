@@ -54,14 +54,16 @@ class TaskController extends Controller
             [
                 'title' => 'required|string|max:300',
                 'description' => 'required|string|max:500',
-                'status' => 'required',
-                'due_date' => 'required',
+                'status' => 'required|in:pending,in_progress,completed',
+                'due_date' => 'required|date',
             ],
             [
                 'title.required'=> 'El titulo es obligatorio', 
                 'description.required'=> 'La descripcion es obligatoria',   
-                'status.required'=> 'El estado es obligatorio',  
+                'status.required'=> 'El estado es obligatorio', 
+                'status.in' => 'Valor invalido',       
                 'due_date.required'=> 'La fecha es obligatoria', 
+                'due_date.date'=> 'La fecha debe ser valida', 
             ]
         );
 
